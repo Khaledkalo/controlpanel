@@ -11,14 +11,25 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 
 module.exports = {
-  entry: "./src/index.js",
+  // entry: "./src/index.js",
 
-  output: {
-    // publiPath: '/',
-    path: path.resolve(__dirname, "app"),
-    filename: "app.js",
+  // output: {
+  //   // publiPath: '/',
+  //   path: path.resolve(__dirname, "app"),
+  //   filename: "app.js",
+  // },
+  entry:  {
+    'app': './src/index.js',
+    'assets/js/banner': './src/assets/js/banner.js',
+    'assets/js/chart': './src/assets/js/chart.js',
+    'assets/js/tabs': './src/assets/js/tabs.js',
+    'assets/js/upload': './src/assets/js/upload.js'
   },
-
+  output: {
+    path: path.join(__dirname, "/app"),
+    publicPath: '/',
+    filename: '[name].js',
+  }, 
 
   devServer: {
     static: {
@@ -42,6 +53,17 @@ module.exports = {
       },
 
       {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      },
+
+      {
         test: /\.(sa|sc|c)ss$/,
         use: [
           MiniCssExtractPlugin.loader, 
@@ -50,6 +72,8 @@ module.exports = {
           'sass-loader'
         ]
       },
+
+
 
       {
         test: /\.(svg|eot|woff|woff2|ttf)$/,
@@ -79,6 +103,32 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "./src/index.html",
+      chunks: ['app', 'assets/js/banner', 'assets/js/tabs', 'assets/js/chart']
     }),
+
+    new HtmlWebpackPlugin({
+      filename: "components/button.html",
+      template: "./src/components/button.html",
+      chunks: ['app']
+    }),
+
+    new HtmlWebpackPlugin({
+      filename: "components/textfield.html",
+      template: "./src/components/textfield.html",
+      chunks: ['app']
+    }),
+
+    new HtmlWebpackPlugin({
+      filename: "components/card.html",
+      template: "./src/components/card.html",
+      chunks: ['app']
+    }),
+
+    new HtmlWebpackPlugin({
+      filename: "components/banner.html",
+      template: "./src/components/banner.html",
+      chunks: ['app', 'assets/js/banner']
+    }),
+
   ],
 };
