@@ -59,7 +59,7 @@ $indicator-size: 10px;
             position: absolute;
             right: 0;
             // top: calc(50% - #{$indicator-size/2});
-            top: calc($indicator-size / 2);
+            top: calc(50% - $indicator-size / 2);
         }
     }
 }

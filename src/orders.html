@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+</head>
+<body>
+    <div class="page-container">
+        <sidebar></sidebar>
+        <div class="single-page">
+            <header class="page-header">
+                <h1 class="page-title">Orders</h1>
+            </header>
+            <div class="c-table c-table--select-all">
+                <header class="c-table__header">
+                    <h3 class="c-table__title">Orders</h3>
+                    <div class="c-table__actions">
+                        <button class="c-btn c-btn--primary c-btn--slim">Shipped</button>
+                        <button class="c-btn c-btn--slim">Processing</button>
+                        <button class="c-btn c-btn--destructive c-btn--slim">Delete</button>
+                    </div>
+                    <div class="c-table__navigation">
+                        <span class="c-table__navigation__caption">6 out of 24</span>
+                        <div class="c-table__navigation__arrows">
+                            <button class="c-btn c-btn--icon"><i class="c-icon c-icon--arrow-right2"></i></button>
+                            <button class="c-btn c-btn--icon"><i class="c-icon c-icon--arrow-left2"></i></button>
+                        </div>
+                    </div>
+                </header>
+                <table class="c-table__data">
+                    <thead>
+                        <tr>
+                            <th>
+                                <input type="checkbox" id="select-all">
+                                <label for="select-all">select all</label>
+                            </th>
+                            <th>
+                                <label for="select-all">Select All</label>
+                            </th>
+                            <th>Product Name</th>
+                            <th>Buyer</th>
+                            <th>Shipping Country</th>
+                            <th>Value</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="c-list c-list--table-row">
+                            <td><input type="checkbox" id="item-1" name="item-1"></td>
+                            <td><img class="c-list__media" src="assets/images/black-shirt.jpg" alt="">
+                            <td>Black Shirt</td>
+                            <td>Ali Jaber</td>
+                            <td>Damascus, Syria</td>
+                            <td>$19.99</td>
+                            <td>
+                                <div class="c-list__actions">
+                                    <a href="#" class="c-btn c-btn--primary c-btn--slim">Shipped</a>
+                                    <a href="#" class="c-btn c-btn--slim">Continue</a>
+                                    <a href="#" class="c-btn c-btn--destructive c-btn--slim">Delete request</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="c-list c-list--table-row">
+                            <td><input type="checkbox" id="item-1" name="item-2"></td>
+                            <td><img class="c-list__media" src="assets/images/black-pants.jpg" alt="">
+                            <td>Black Trousers</td>
+                            <td>Ahmed Marzouk</td>
+                            <td>Aleppo, Syria</td>
+                            <td>$24.99</td>
+                            <td>
+                                <div class="c-list__actions">
+                                    <a href="#" class="c-btn c-btn--primary c-btn--slim">Shipped</a>
+                                    <a href="#" class="c-btn c-btn--slim">Continue</a>
+                                    <a href="#" class="c-btn c-btn--destructive c-btn--slim">Delete request</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="c-list c-list--table-row">
+                            <td><input type="checkbox" id="item-1" name="item-3"></td>
+                            <td><img class="c-list__media" src="assets/images/brown-shoe.jpg" alt="">
+                            <td>Leather Shoes</td>
+                            <td>Maher Karim</td>
+                            <td>Cairo, Egypt</td>
+                            <td>$341.97</td>
+                            <td>
+                                <div class="c-list__actions">
+                                    <a href="#" class="c-btn c-btn--primary c-btn--slim">Shipped</a>
+                                    <a href="#" class="c-btn c-btn--slim">Continue</a>
+                                    <a href="#" class="c-btn c-btn--destructive c-btn--slim">Delete request</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="c-list c-list--table-row">
+                            <td><input type="checkbox" id="item-1" name="item-4"></td>
+                            <td><img class="c-list__media" src="assets/images/running-shoe.jpg" alt="">
+                            <td>Running shoes</td>
+                            <td>Maher Ali Maher</td>
+                            <td>Muscat, Sultanate of Oman</td>
+                            <td>$159.99</td>
+                            <td>
+                                <div class="c-list__actions">
+                                    <a href="#" class="c-btn c-btn--primary c-btn--slim">Shipped</a>
+                                    <a href="#" class="c-btn c-btn--slim">Continue</a>
+                                    <a href="#" class="c-btn c-btn--destructive c-btn--slim">Delete request</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="c-list c-list--table-row">
+                            <td><input type="checkbox" id="item-1" name="item-5"></td>
+                            <td><img class="c-list__media" src="assets/images/dw-watch.jpg" alt="">
+                            <td>Daniel Wellington Watch</td>
+                            <td>Fahad Alshahri</td>
+                            <td>Abha, Saudi Arabia</td>
+                            <td>$478.13</td>
+                            <td>
+                                <div class="c-list__actions">
+                                    <a href="#" class="c-btn c-btn--primary c-btn--slim">Shipped</a>
+                                    <a href="#" class="c-btn c-btn--slim">Continue</a>
+                                    <a href="#" class="c-btn c-btn--destructive c-btn--slim">Delete request</a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <footer class="c-table__footer">
+                    <div class="c-table__navigation">
+                        <span class="c-table__navigation__caption">6 out of 24</span>
+                        <div class="c-table__navigation__arrows">
+                            <button class="c-btn c-btn--icon"><i class="c-icon c-icon--arrow-right2"></i></button>
+                            <button class="c-btn c-btn--icon"><i class="c-icon c-icon--arrow-left2"></i></button>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <help></help>
+        </div>
+    </div>        
+</body>
+</html>
